@@ -1,5 +1,5 @@
 # Just Dessert
-require 'pry'
+
 
 class CookieInventory
   attr_accessor :peanut_butter, :chocolate_chip, :sugar
@@ -20,7 +20,6 @@ class CookieInventory
   end
 
   def sell!(cookie_type, cookies_sold)
-    # @cookie_type = cookie_type
     @cookies_sold = cookies_sold
     if @cookie_hash.include?(cookie_type) && @cookie_hash[cookie_type] < 0
       puts "Sorry, that's more than we have."
@@ -34,5 +33,4 @@ class CookieInventory
     end
   end
 
-binding.pry
 end
